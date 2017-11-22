@@ -1,0 +1,39 @@
+//FILTER
+//taking out the first object of the users array using filter
+const users = [
+  {
+    name: 'Samir', 
+    age: 30
+  },
+  {
+    name: 'Angel',
+    age: 33
+  },
+  {
+    name: 'Henry',
+    age: 26
+  }
+];
+//FILTER
+const newArray = users.filter(user => user.name !== 'Samir');
+console.log(newArray);
+//[name: 'Angel'...age: 26]
+
+//MAP
+//displaying each name with their age
+const ageArray = users.map(user => `${user.name} is ${user.age} years old`);
+console.log(ageArray);
+
+
+//MAP
+//using map method to join names together
+const authors = [
+  { firstName: "Beatrix", lastName: "Potter" },
+  { firstName: "Ann", lastName: "Martin" },
+  { firstName: "Beverly", lastName: "Cleary" },
+  { firstName: "Roald", lastName: "Dahl" },
+  { firstName: "Lewis", lastName: "Carroll" }
+];
+let fullAuthorNames = authors.map(full => `${full.firstName} ${full.lastName}`);
+console.log(fullAuthorNames);
+// ["Beatrix Potter", "Ann Martin", "Beverly Cleary", "Roald Dahl", "Lewis Carroll"]
